@@ -9,7 +9,6 @@ export const authConfig = {
   {
       authorized({ auth, request: { nextUrl } }) 
       {
-        console.log("Authenticated user is : " + JSON.stringify(auth));
         const isLoggedIn = !!auth?.user;
         const isOnDashboard = nextUrl.pathname.startsWith('/home');
         if (isOnDashboard) {
@@ -26,7 +25,6 @@ export const authConfig = {
         //session.user.isAdmin = token.user.role === "admin";
         console.log("Session user email is : " + JSON.stringify(token));
         token.email = session.user.email;
-        console.log("UUUU = " + JSON.stringify(user));
         return session;
       },
   },

@@ -2,12 +2,12 @@
   "node": {
     "e1568bb5f62acd4e2e1fdd6d14a2e6499ea49af3": {
       "workers": {
-        "app/home/products/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CProj%5C%5CeCSRM%5C%5Capp%5C%5Cui%5C%5Cdashboard%5C%5Csidenav.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
-        "app/home/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CProj%5C%5CeCSRM%5C%5Capp%5C%5Cui%5C%5Cdashboard%5C%5Csidenav.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+        "app/home/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CProj%5C%5CeCSRM%5C%5Capp%5C%5Cui%5C%5Cdashboard%5C%5Csidenav.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
+        "app/home/products/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22E%3A%5C%5CProj%5C%5CeCSRM%5C%5Capp%5C%5Cui%5C%5Cdashboard%5C%5Csidenav.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
-        "app/home/products/page": "rsc",
-        "app/home/page": "rsc"
+        "app/home/page": "rsc",
+        "app/home/products/page": "rsc"
       }
     },
     "261410e9287f2511bde8e0cfea6437c7089e9804": {
@@ -36,5 +36,5 @@
     }
   },
   "edge": {},
-  "encryptionKey": "QI6YuMGPS1p1X2dobQIb08Xo8yY32fmHulQp+L+PUK0="
+  "encryptionKey": "UvwGj51RL8Zh2CTQK6NEMjEIDuN83JOKbT++o7rRR+o="
 }

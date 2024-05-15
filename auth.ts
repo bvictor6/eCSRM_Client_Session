@@ -7,6 +7,7 @@ import bcrypt from 'bcrypt';
 import { json } from 'stream/consumers';
 import { headers } from 'next/headers';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { Session } from 'inspector';
  
 /** for testing purposes only
 async function getUser(email: string, password: string): Promise<User | undefined> {
@@ -88,16 +89,29 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
+  session: {
+      strategy: 'jwt',
+      //jwt: true,
+      //maxAge: 30 * 24 * 60 * 60,
+      maxAge: 1 * 1 * 15 * 60, //30 MIN
+  },
+  jwt: {
+    maxAge: 1 * 1 * 1 * 60,
+      signingKey: process.env.JWT_SIGNING_PRIVATE_KEY,
+  },
   callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.user = user;
+    async jwt({ token, account, user }) {
+      if (account) {
+          token.accessToken = account.access_token;
       }
-      return Promise.resolve(token); // JWT interface we declared in next-auth.d.ts
+      if (user) {
+          token.user = user;
+      }
+      return Promise.resolve(token); // 
     },
-    async session({ session, token }) {
+    async session({ session, token, user }) {
       session.user = token.user;
-      return session; // Session interface we declared in next-auth.d.ts
+      return session; //
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
